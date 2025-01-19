@@ -4,3 +4,8 @@
   tasks:
     - name: get hostname
       win_shell: Get-WmiObject Win32_ComputerSystem
+    - Send mail
+      mail:
+        subject: Test subject
+      delegate_to: localhost
+      
