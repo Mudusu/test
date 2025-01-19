@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name: get hostname
-      win_shell: hostname
+      win_shell: Get-WmiObject Win32_ComputerSystem
