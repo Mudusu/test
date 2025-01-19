@@ -1,6 +1,6 @@
 ---
 - name: test playbook
-  hosts: all
+  hosts: dc01.winadmin.me
   tasks:
     - name: get hostname
       win_shell: Get-WmiObject Win32_ComputerSystem
