@@ -5,7 +5,7 @@
     - name: get hostname
       win_shell: Get-WmiObject Win32_ComputerSystem
     - name: Send mail
-      mail:
+      community.general.mail:
         subject: Test subject
       delegate_to: localhost
       
