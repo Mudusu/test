@@ -1,13 +1,7 @@
 ---
-- name: test playbook
+- name: Test Kerberos Authentication
   hosts: dc01.winadmin.me
+  gather_facts: false
   tasks:
-    - name: get ComputerSystem
-      win_shell: Get-WmiObject Win32_ComputerSystem
-      register: cs
-    - name: Debug
-      debug:
-        msg: "{{ cs.stdout_lines }}"
-    - name: Debug
-      debug:
-        msg: "{{ ansible_facts }}"
+    - name: Ensure windows host is reachable
+      ansible.windows.win_ping:
