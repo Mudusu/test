@@ -1,6 +1,6 @@
 ---
 - name: Test Kerberos Authentication
-  hosts: dc01.winadmin.me
+  hosts: dc01.example.org
   gather_facts: false
   tasks:
     - name: Ensure windows host is reachable
